@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <title>v-model</title>
 </head>
+
 <body>
   <h1>v-model 实例</h1>
   <hr>
   <div id="app">
-    <p>{{message}}</p><br/>
+    <p>{{message}}</p><br />
     <p><input type="text" v-model.lazy="message"></p>
     <p><input type="text" v-model.number="message"></p>
     <!-- trim 删除前后空格 -->
@@ -19,22 +21,43 @@
     <hr>
     <h3>文本域</h3>
     <textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
-    <h3>多选框绑定一个值</h3>
+    <h3>多选框绑定数组</h3>
     <input type="checkbox" id="istrue" v-model="Istrue">
     <label for="Istrue">{{Istrue}}</label>
+    <p>
+      <input type="checkbox" id="jspang" value="jspang" v-model="webnames">
+      <label for="Istrue">jspang</label>
+      <input type="checkbox" id="lsw" value="lsw" v-model="webnames">
+      <label for="Istrue">lsw</label>
+      <input type="checkbox" id="wzx" value="wzx" v-model="webnames">
+      <label for="Istrue">wzx</label>
+    </p>
+    <p>{{webnames}}</p>
+    <hr>
+    <h3>单选框的绑定</h3>
+    <p>
+      <input type="radio" id="one" value="男" v-model="sex">
+      <label for="one">男</label>
+      <input type="radio" id="two" value="女" v-model="sex">
+      <label for="two">女</label>
+    </p>
+    <p>{{sex}}</p>
   </div>
 
   <script>
-  var app = new Vue({
-    el:'#app',
-    data:{
-     message:'hello world',
-     Istrue:true
-    },
-    methods: {
-     
-    },
-  })  
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',
+        Istrue: true,
+        webnames: [],
+        sex:'男'
+      },
+      methods: {
+
+      },
+    })  
   </script>
 </body>
+
 </html>
