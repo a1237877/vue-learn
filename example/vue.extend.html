@@ -11,6 +11,7 @@
   <h1>v.extend 实例</h1>
   <hr>
   <author></author>
+  <div id="author"></div>
   
 
   <script>
@@ -23,7 +24,9 @@
       }
     }
     })
-    new authorUrl().$mount("author")
+    new authorUrl().$mount("author");
+    new authorUrl().$mount("#author")
+
     
   </script>
 </body>
