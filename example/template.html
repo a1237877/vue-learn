@@ -16,7 +16,13 @@
    {{message}}
 
   </div>
+  <template id="dd2">
+    <h2 style="color:red">我是template标签模板</h2>
+  </template>
   
+  <script type="x-template" id="dd3">
+    <h2 style="color:red">我是script标签模板</h2>
+  </script>
 
 
 
@@ -29,6 +35,9 @@
       // template:`
       // <h2 style="color:red">我是选项模板</h2>
       // `
+      template:"#dd3",
+      // template:"#dd2"
+
      
     })  
   </script>
